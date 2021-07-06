@@ -2,8 +2,9 @@
 
 SC_MODULE(adder)
 {
-    sc_in<sc_int<32>> x, y;
-    sc_out<sc_int<32>> z;
+    //ports
+    sc_in<sc_lv<32>> x, y;
+    sc_out<sc_lv<32>> z;
 
     SC_CTOR(adder)
     {
@@ -13,7 +14,6 @@ SC_MODULE(adder)
 
     void add()
     {
-
-        z.write(x.read() + y.read());
+        z.write(x.read().to_int() + y.read().to_int());
     }
 };

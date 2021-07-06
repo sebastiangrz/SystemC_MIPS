@@ -2,6 +2,7 @@
 
 SC_MODULE(sign_extend)
 {
+    //ports
     sc_in<sc_lv<16>> x;
     sc_out<sc_lv<32>> y;
 
