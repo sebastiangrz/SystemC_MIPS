@@ -1,0 +1,17 @@
+#include "systemc.h"
+
+SC_MODULE(x)
+{
+    //ports
+
+    SC_CTOR(x)
+    {
+        SC_METHOD(xm);
+        sensitive << ?;
+    }
+
+    void xm()
+    {
+
+    }
+};
