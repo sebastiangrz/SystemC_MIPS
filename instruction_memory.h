@@ -54,12 +54,12 @@ SC_MODULE(instruction_memory)
 
     void memory()
     {
-        ifstream file_pointer;
+        std::ifstream file_pointer;
         file_pointer.open("instructions.txt");
 
         int i = 0;
 
-        while(file_pointer.eof())
+        while(!file_pointer.eof())
         {
             std::string currentLine;
             getline(file_pointer, currentLine);
